@@ -1,8 +1,12 @@
-# BLACKMOTH
-[<img src="https://user-images.githubusercontent.com/63486672/113639717-67973180-963f-11eb-9cec-0d01388a2ce4.png" width="725"/>](image.png)
+ ▄▀▀█▄▄   ▄▀▀▀▀▄      ▄▀▀█▄   ▄▀▄▄▄▄   ▄▀▀▄ █  ▄▀▀▄ ▄▀▄  ▄▀▀▀▀▄   ▄▀▀▀█▀▀▄  ▄▀▀▄ ▄▄  
+▐ ▄▀   █ █    █      ▐ ▄▀ ▀▄ █ █    ▌ █  █ ▄▀ █  █ ▀  █ █      █ █    █  ▐ █  █   ▄▀ 
+  █▄▄▄▀  ▐    █        █▄▄▄█ ▐ █      ▐  █▀▄  ▐  █    █ █      █ ▐   █     ▐  █▄▄▄█  
+  █   █      █        ▄▀   █   █        █   █   █    █  ▀▄    ▄▀    █         █   █  
+ ▄▀▄▄▄▀    ▄▀▄▄▄▄▄▄▀ █   ▄▀   ▄▀▄▄▄▄▀ ▄▀   █  ▄▀   ▄▀     ▀▀▀▀    ▄▀         ▄▀  ▄▀  
+█    ▐     █         ▐   ▐   █     ▐  █    ▐  █    █             █          █   █    
+▐          ▐                 ▐        ▐       ▐    ▐             ▐          ▐   ▐    
 
-
-BLACKMOTH is a script created to automate the capture of an 802.11 handshake via aireplay-ng/mdk4
+Crystal utility to automate the capture of an 802.11 handshake via aireplay-ng/mdk4
 
 ## Installation
 
