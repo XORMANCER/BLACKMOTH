@@ -20,9 +20,9 @@ All configuration files are located within `/usr/share/BLACKMOTH`
 ```bash
 sudo blackmoth
 ```
-Note: mdk4 typically requires a larger wait time, as it takes time to spin up.  
-Recommended deauth wait time values: 
-* mdk4: 15; 
-* aireplay-ng: 10
+## Notes 
+Recommended deauth wait time values
+* mdk4: `15` 
+* aireplay-ng: `10`
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
