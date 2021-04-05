@@ -3,7 +3,7 @@ Crystal utility to automate the capture of an 802.11 handshake via aireplay-ng/m
 
 ## Installation
 
-After installing [crystal](https://crystal-lang.org/install/), run the included bash script to install BLACKMOTH.
+After installing [crystal](https://crystal-lang.org/install/), build main.cr and run the setup file.
 
 ```bash
 sudo crystal build main.cr -o blackmoth
