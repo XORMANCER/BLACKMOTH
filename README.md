@@ -12,7 +12,7 @@ sudo chmod +x setup.sh
 ./setup.sh
 ```
 
-The compiled binary will be moved to `/usr/bin/blackmoth`
+The compiled binary will be moved to `/usr/bin/blackmoth`  
 All configuration files are located within `/usr/share/BLACKMOTH`
 
 ## Usage
