@@ -222,7 +222,7 @@ class Master
               channel_check = false
             end
           end
-          child_pid.signal(Signal::HUP)
+          child_pid.signal(Signal::KILL)
           scanning = false
         end
       end
@@ -270,7 +270,7 @@ class Master
         #If found, send a kill command to our child process
         if File.read("findCLIENT-01.csv").includes?(client)
           puts " // Client #{client} has been found! ".colorize.light_green, ""
-          child_pid.signal(Signal::HUP)
+          child_pid.signal(Signal::KILL)
           scanning = false
         end
       end
@@ -350,7 +350,7 @@ class Master
       puts ""
       print "[!!!] Handshake is found! (✿◠‿◠) ".colorize.light_magenta
       puts " #{current_val.to_s}", ""
-      child_pid.signal(Signal::HUP)
+      child_pid.signal(Signal::KILL)
       puts "Waiting for airodump (PID: #{child_pid}) to finish...", ""
     end
 # End of class
