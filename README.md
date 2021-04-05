@@ -1,5 +1,6 @@
 # BLACKMOTH
-![image](https://user-images.githubusercontent.com/63486672/113639461-d758ec80-963e-11eb-9131-df23ec71b8f2.png =250x)
+[<img src="https://user-images.githubusercontent.com/63486672/113639717-67973180-963f-11eb-9cec-0d01388a2ce4.png" width="725"/>](image.png)
+
 
 BLACKMOTH is a script created to automate the capture of an 802.11 handshake via aireplay-ng/mdk4
 
