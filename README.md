@@ -6,7 +6,7 @@ Crystal utility to automate the capture of an 802.11 handshake via aireplay-ng/m
 After installing [crystal](https://crystal-lang.org/install/), build main.cr and run the setup file
 
 ```bash
-sudo crystal build main.cr -o blackmoth
+sudo crystal build --release main.cr -o blackmoth
 sudo chmod +x setup.sh
 ./setup.sh
 ```
