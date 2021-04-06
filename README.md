@@ -1,4 +1,4 @@
-![](https://user-images.githubusercontent.com/63486672/113641240-e04bbd00-9642-11eb-8072-23124ef3b578.png)
+![](https://user-images.githubusercontent.com/63486672/113639997-176c9f00-9640-11eb-9e76-8a11cc108d75.png)
 Crystal utility to automate the capture of an 802.11 handshake via aireplay-ng/mdk4
 
 ## Installation
