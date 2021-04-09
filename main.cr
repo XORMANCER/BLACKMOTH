@@ -347,6 +347,8 @@ class Master
           end
         end
       end
+      system "clear"
+      moth()
       puts ""
       print "[!!!] Handshake is found! (✿◠‿◠) ".colorize.light_magenta
       puts " #{current_val.to_s}", ""
@@ -390,12 +392,17 @@ def main()
       end
       # Unleash the moth
       🔥 = Master.new()
+      Signal::INT.trap() do
+        `sudo pkill airodump-ng`
+        exit()
+      end
       🔥.banner
       🔥.monset
       🔥.findBSSID
     ensure
       startup_banner()
       puts "\t\t\t     Stay away from the light".colorize.red, ""
+      `sudo pkill airodump-ng`
       exit()
     end
 end
