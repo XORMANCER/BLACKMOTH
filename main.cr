@@ -177,8 +177,9 @@ class Master
         puts ">> Starting airodump-ng survey".colorize.light_magenta, ""
         #Grabs wifi interface from json
         iface = @json_object["wifi_card"]
+        bssid = @json_object["bssid"].to_s
         #Starts the airodump process
-        puts `sudo airodump-ng -w findBSSID --band abg --output-format csv #{iface}`
+        puts `sudo airodump-ng -w findBSSID --bssid #{bssid} --band abg --output-format csv #{iface}`
         Signal::INT.trap() do
           puts "Signal caught. Exiting cleanly."
           exit()
@@ -224,6 +225,7 @@ class Master
           end
           child_pid.signal(Signal::KILL)
           scanning = false
+	  `sudo pkill airodump-ng`
         end
       end
       # Launch FIND CLIENT
@@ -272,6 +274,7 @@ class Master
           puts " // Client #{client} has been found! ".colorize.light_green, ""
           child_pid.signal(Signal::KILL)
           scanning = false
+	  `sudo pkill airodump-ng`
         end
       end
       #Starts deauthClient function
@@ -354,6 +357,7 @@ class Master
       puts " #{current_val.to_s}", ""
       child_pid.signal(Signal::KILL)
       puts "Waiting for airodump (PID: #{child_pid}) to finish...", ""
+      `sudo pkill airodump-ng`
     end
 # End of class
 end
