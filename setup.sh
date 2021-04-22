@@ -13,7 +13,7 @@ echo ""
 echo "[~] Installing needed programs.."
 echo ""
 sudo apt-get update
-sudo apt-get install -y wireless-tools net-tools aircrack-ng grep gawk iw mdk4 aircrack-ng
+sudo apt-get install -y wireless-tools net-tools aircrack-ng grep gawk iw mdk4
 
 echo ""
 echo "[~] Copying binary files to /usr/bin/"
