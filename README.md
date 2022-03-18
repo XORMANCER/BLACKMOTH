@@ -4,22 +4,31 @@
 
 ## 📝 Installation
 
-After installing [crystal](https://crystal-lang.org/install/), build main.cr and run the setup file
+Install the [crystal](https://crystal-lang.org/install/) programming language.
 
+For kali linux (debian) users, the following command will install crystal.
+```bash
+curl -fsSL https://crystal-lang.org/install.sh | sudo bash
+```
+Next, run the following commands to build main.cr and execute the setup file.
 ```bash
 sudo crystal build --release main.cr -o blackmoth
 sudo chmod +x setup.sh
 sudo ./setup.sh
 ```
 
-The compiled binary will be moved to `/usr/bin/blackmoth`  
+The compiled binary will be installed to `/usr/bin/blackmoth`  
 All configuration files are located within `/usr/share/BLACKMOTH`
 
 ## 🦋 Usage
 
+The tool can be executed by simply typing the following into your terminal.
 ```bash
 sudo blackmoth
 ```
+Blackmoth will prompt you to enter a new configuration, which entails the targets BSSID and the clients MAC ADDR.
+NOTE: This tool is meant for follow on enumeration after an initial survey has been completed,
+      and is not designed to be a survey tool.
 ## 💡 Configuration
 Recommended deauth wait time values
 * mdk4: `15` 
