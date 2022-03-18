@@ -26,7 +26,6 @@ The tool can be executed by simply typing the following into your terminal.
 ```bash
 sudo blackmoth
 ```
-Blackmoth will prompt you to enter a new configuration, which entails the targets BSSID and the clients MAC ADDR.
 NOTE: This tool is meant for follow on enumeration after an initial survey has been completed,
       and is not designed to be a survey tool.
 ## 💡 Configuration
