@@ -122,29 +122,44 @@ class Master
         print "\t"
         puts "   - HANDSHAKES FASTER THAN DADS AT THANKSGIVING -".colorize.light_red
         puts ""
-        puts "\t\t\t   -Version 2a-"
+        puts "\t\t\t   -Version 2a-\n\n"
     end
     # Deauth banner
     def moth()
-      puts "
-    \t                   '         '
-    \t   .,,,             '       '             ,,,.
-    \t   'YES8888bo.       :     :       .od8888YES'
-    \t     888IO8DO88b.     :   :     .d8888I8DO88
-    \t     8LOVEY'  'Y8b.   '   '   .d8Y'  'YLOVE8
-    \t    jTHEE!  .db.  Yb. '   ' .dY  .db.  8THEE!
-    \t      '888  Y88Y    'b ( ) d'    Y88Y  888'
-    \t       8MYb  '`        ,',        `'  dMY8
-    \t      j8prECIOUSgf`'   ':'   '`?g8prECIOUSk
-    \t        'Y'   .8'     d' 'b     '8.   'Y'
-    \t         !   .8' db  d'; ;'b  db '8.   !
-    \t            d88  ''  8 ; ; 8  '''  88b
-    \t           d88Ib   .g8 ',' 8g.   dI88b
-    \t          :888LOVE88Y'     'Y88LOVE888:
-    \t          '! THEE888'       '888THEE !'
-    \t             '8Y  'Y         Y'  Y8'
-    \t              Y                   Y
-    \t              !                   !"
+            puts "
+                            ,-. 
+                           /$$| 
+                          ,;$'`: 
+                         / $'  `, 
+                         | `     \, 
+                         |,m.    ,\_ 
+                         |Y`F ,-,$$ `. 
+                         |`-'/-'$$,::.\ 
+                          \    ;$';::: ) 
+                         ,:\   $':::;,'_ 
+    _,---------.__   ,.. ::'\ `';::',-' \ 
+   ($$$`'   (88`) `-.;:::;, )  `',-dP  : `, 
+    `--.      ,--,     `-.|`-.,     --. : \, 
+        \_    `-',$$$:.   \ -'\`-._  `'  : \__ 
+          `.`$$$$`',.:::/  `.-'\   `--._      `---._________,'`._,' 
+            ) .:::::::'/,   \`. \       `--------------------```' 
+            `-.`:::'_,'P  / `  \_| 
+               `---'/:   (;  : 
+                    `. : :   | 
+                      `-.  ..| 
+                         `.  | 
+                           ):     Deauth, with the moth 
+                           || 
+                           || 
+                           || 
+                           || 
+                           |' 
+                           /' 
+            -Oberon-      /| 
+                         ( / 
+                          ) 
+                         '
+"
     end
     # Sets monitor mode
     def monset()
@@ -278,6 +293,8 @@ class Master
         end
       end
       #Starts deauthClient function
+        puts ">> Entering deauthentication phase".colorize.light_magenta
+      sleep 3
       deauthClient(channel_num)
     end
 
@@ -351,12 +368,14 @@ class Master
         end
       end
       system "clear"
-      moth()
+      startup_banner()
+      puts "\t\t\t     Stay away from the light".colorize.red, ""
       puts ""
       print "[!!!] Handshake is found! (✿◠‿◠) ".colorize.light_magenta
       puts " #{current_val.to_s}", ""
       child_pid.signal(Signal::KILL)
-      puts "Waiting for airodump (PID: #{child_pid}) to finish...", ""
+      #puts "[~] Waiting for airodump (#{child_pid}) to finish...", ""
+
       `sudo pkill airodump-ng`
     end
 # End of class
@@ -404,8 +423,6 @@ def main()
       🔥.monset
       🔥.findBSSID
     ensure
-      startup_banner()
-      puts "\t\t\t     Stay away from the light".colorize.red, ""
       `sudo pkill airodump-ng`
       exit()
     end
