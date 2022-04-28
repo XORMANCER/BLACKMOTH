@@ -251,7 +251,7 @@ class Master
       channel_num = channel_info
       #Creates the first capture as a child
       child_pid = Process.fork() do
-        puts ">> Locating target client".colorize.light_magenta, ""
+        puts ">> Locating target client".colorize.light_magenta, "\r"
         #Grabs wifi interface from json
         iface = @json_object["wifi_card"].to_s
         bssid = @json_object["bssid"].to_s
@@ -293,7 +293,7 @@ class Master
         end
       end
       #Starts deauthClient function
-        puts ">> Entering deauthentication phase".colorize.light_magenta
+        puts ">> Entering deauthentication phase".colorize.light_magenta, "\r"
       sleep 3
       deauthClient(channel_num)
     end
@@ -375,7 +375,6 @@ class Master
       puts " #{current_val.to_s}", ""
       child_pid.signal(Signal::KILL)
       #puts "[~] Waiting for airodump (#{child_pid}) to finish...", ""
-
       `sudo pkill airodump-ng`
     end
 # End of class
@@ -417,6 +416,10 @@ def main()
       🔥 = Master.new()
       Signal::INT.trap() do
         `sudo pkill airodump-ng`
+        system "clear"
+        puts "", "\r"
+        startup_banner()                         
+        puts "\t\t\t       You feared the light".colorize.red, "", ""
         exit()
       end
       🔥.banner
