@@ -155,7 +155,7 @@ class Master
                            || 
                            |' 
                            /' 
-            -Oberon-      /| 
+          -Overbyte-      /| 
                          ( / 
                           ) 
                          '
